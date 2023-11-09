@@ -16,7 +16,7 @@ CREATE TABLE usuarios(
 
 # Faça o comando SQL para criação da tabela de notícias com todas as colunas: id, data, titulo, texto, resumo, imagem e usuario_id
 
-CREATE TABLE usuarios(
+CREATE TABLE noticias(
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     titulo VARCHAR(150) NOT NULL,
@@ -25,3 +25,9 @@ CREATE TABLE usuarios(
     imagem VARCHAR(45) NOT NULL,
     usuario_id INT NOT NULL
 ); 
+
+## Criar o relacionamento entre as tabelas e a chave estrangeira
+
+ALTER TABLE noticias
+    ADD CONSTRAINT fk_noticias_usuarios
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id);
