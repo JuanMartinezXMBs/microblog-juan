@@ -10,7 +10,7 @@
 ## Exemplos
 
 ### INSERT na tabela de usuarios 
-
+```sql
 INSERT INTO usuarios (nome, email, senha, tipo) 
     VALUES (
     'Juan Martinez',
@@ -18,7 +18,8 @@ INSERT INTO usuarios (nome, email, senha, tipo)
     'salada123',
     'admin'
 );
-
+```
+```sql
 INSERT INTO usuarios (nome, email, senha, tipo) 
     VALUES 
         (
@@ -39,6 +40,7 @@ INSERT INTO usuarios (nome, email, senha, tipo)
             'marreta',
             'editor'
         );
+```
 
 ## SELECT na tabela de usuário (selecionar usuarios especificos usando WHERE "nome da coluna = 'admin'")
 
@@ -57,6 +59,7 @@ DELETE FROM usuarios WHERE id = 2;
 
 ### INSERT na tabela de noticias
 
+```sql
 INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id)
 VALUES(
     'Descoberto oxigênio em venus',
@@ -65,7 +68,8 @@ VALUES(
     'venus.jpg',
     1
 );
-
+```
+```sql
 INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id)
 VALUES(
     'Nova versão do VScode',
@@ -74,7 +78,8 @@ VALUES(
     'VScodeATT.jpg',
     4
 );
-
+```
+```sql
 INSERT INTO noticias (titulo, texto, resumo, imagem, usuario_id)
 VALUES(
     'Energia Solar? ou preços altos?',
@@ -83,11 +88,12 @@ VALUES(
     'fritandoOVO.jpg',
     1
 );
-
+```
 ### Objetivo: consulta que mostre a data e o titulo da noticia e o nome do autor desta noticia
 
 #### SELECT.JOIN (CONSULTA COM JUNÇÃO DE TABELAS)
 
+```sql
 -- Especificamos o nome da coluna com o nome da tabela 
 SELECT 
     noticia.data, 
@@ -103,3 +109,4 @@ ON noticias.usuario_id = usuario.id
 
 -- OPCIONAL (ordenação pela data, das noticias mais recentes primeiro (DESC = ordem decrescente))
 ORDER by data DESC;
+```
