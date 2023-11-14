@@ -42,18 +42,18 @@ INSERT INTO usuarios (nome, email, senha, tipo)
 
 ## SELECT na tabela de usuário (selecionar usuarios especificos usando WHERE "nome da coluna = 'admin'")
 
-SELECT *(coluna) FROM usuarios (where); <!-- (sem o parenteses vai aparecer tudo) -->
+SELECT *(coluna) FROM usuarios (where); -- (sem o parenteses vai aparecer tudo)
 
 ## UPDATE em dados da tabela de usuários
 
 UPDATE usuarios SET tipo = 'admin' WHERE id = 4; 
-<!-- nunca esqueça de passar uma condição para o UPDATE, pois isso pode acarretar em um problemaço -->
+-- nunca esqueça de passar uma condição para o UPDATE, pois isso pode acarretar em um problemaço 
 
 ## DELETE em dados da tabela de usuários
 
 DELETE FROM usuarios WHERE id = 2;
 
-<!-- nunca esqueça de passar uma condição para o DELETE, pois isso pode acarretar em um problemaço -->
+-- nunca esqueça de passar uma condição para o DELETE, pois isso pode acarretar em um problemaço 
 
 ### INSERT na tabela de noticias
 
@@ -88,18 +88,18 @@ VALUES(
 
 #### SELECT.JOIN (CONSULTA COM JUNÇÃO DE TABELAS)
 
-<!-- Especificamos o nome da coluna com o nome da tabela -->
+-- Especificamos o nome da coluna com o nome da tabela 
 SELECT 
     noticia.data, 
     noticia.titulo, 
     usuarios.nome 
 
-<!-- Especificando quais tabelas serão relacionadas -->
+-- Especificando quais tabelas serão relacionadas
 FROM noticias JOIN usuarios
 
-<!-- Criterio para a junção -->
-<!-- estamos comparadando a chave estrangeira(FK) com a chave primaria (PK) -->
+-- Criterio para a junção
+-- estamos comparadando a chave estrangeira(FK) com a chave primaria (PK)
 ON noticias.usuario_id = usuario.id
 
-<!-- OPCIONAL (ordenação pela data, das noticias mais recentes primeiro (DESC = ordem decrescente)) -->
+-- OPCIONAL (ordenação pela data, das noticias mais recentes primeiro (DESC = ordem decrescente))
 ORDER by data DESC;
