@@ -25,7 +25,7 @@ INSERT INTO usuarios (nome, email, senha, tipo)
             'Fulano da Silva',
             'fulano@gmail.com',
             '456',
-            'aditor'
+            'editor'
         ), 
         (
             'Beltrano Soares',
@@ -37,7 +37,7 @@ INSERT INTO usuarios (nome, email, senha, tipo)
             'chapolin Colarado',
             'chapolin@vingadores.com.br',
             'marreta',
-            'aditor'
+            'editor'
         );
 
 ## SELECT na tabela de usuário (selecionar usuarios especificos usando WHERE "nome da coluna = 'admin'")
