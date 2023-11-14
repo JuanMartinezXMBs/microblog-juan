@@ -46,4 +46,12 @@ SELECT *(coluna) FROM usuarios (where); <!-- (sem o parenteses vai aparecer tudo
 
 ## UPDATE em dados da tabela de usuários
 
-UPDATE usuarios SET tipo = 'admin' WHERE id = 4; <!-- nunca esqueça de passar uma condição para o UPDATE, pois isso pode acarretar em um problemaço -->
+UPDATE usuarios SET tipo = 'admin' WHERE id = 4; 
+<!-- nunca esqueça de passar uma condição para o UPDATE, pois isso pode acarretar em um problemaço -->
+
+## DELETE em dados da tabela de usuários
+
+DELETE FROM usuarios WHERE id = 2;
+
+<!-- nunca esqueça de passar uma condição para o DELETE, pois isso pode acarretar em um problemaço -->
+
