@@ -88,13 +88,18 @@ VALUES(
 
 #### SELECT.JOIN (CONSULTA COM JUNÇÃO DE TABELAS)
 
+<!-- Especificamos o nome da coluna com o nome da tabela -->
 SELECT 
     noticia.data, 
     noticia.titulo, 
     usuarios.nome 
 
+<!-- Especificando quais tabelas serão relacionadas -->
 FROM noticias JOIN usuarios
 
+<!-- Criterio para a junção -->
+<!-- estamos comparadando a chave estrangeira(FK) com a chave primaria (PK) -->
 ON noticias.usuario_id = usuario.id
 
+<!-- OPCIONAL (ordenação pela data, das noticias mais recentes primeiro (DESC = ordem decrescente)) -->
 ORDER by data DESC;
