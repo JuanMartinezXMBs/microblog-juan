@@ -1,5 +1,22 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
+
+// importando as funções do arquivo
+require "../inc/funcoens-usuarios.php";
+
+/* Detectando se o formulario foi acionado */
+if( isset($_POST['inserir']) ){
+
+	$nome = $_POST["nome"];
+	$email = $_POST["email"];
+	$tipo = $_POST["tipo"];
+
+	// capturando a senha e codificando ela usando o PHP
+	$senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
+
+	// chamando a função e repassando para ela os dados a serem inseridos
+	inserirUsuario($conexao, $email, $nome, $senha, $tipo);
+}
 ?>
 
 
