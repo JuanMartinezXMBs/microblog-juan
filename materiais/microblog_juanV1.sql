@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Nov-2023 às 21:34
+-- Tempo de geração: 14-Nov-2023 às 21:27
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.1.12
 
@@ -39,6 +39,15 @@ CREATE TABLE `noticias` (
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Extraindo dados da tabela `noticias`
+--
+
+INSERT INTO `noticias` (`id`, `data`, `titulo`, `texto`, `resumo`, `imagem`, `usuario_id`) VALUES
+(1, '2023-11-14 16:21:25', 'Descoberto oxigênio em venus', 'O oxigênio é produzido no lado diurno do planeta pela radiação ultravioleta do Sol, que quebra o dióxido de carbono atmosférico e o monóxido de carbono em átomos de oxigênio e outros produtos químicos, disseram os pesquisadores...', 'O oxigênio é produzido no lado diurno do planeta pela radiação ultravioleta do Sol...', 'venus.jpg', 1),
+(2, '2023-11-14 16:33:44', 'Nova versão do VScode', 'Uma nova versão do VScode foi lançada nessa manhã de terça-feira dia 14/11/2023, com varias novas utilidasdes e compatiblilidades, ele promete melhorar desde desempenho a uma IA integrada, com acitação a desenvolvimento SWIFT', 'Uma nova versão do VScode foi lançada nessa manhã de terça-feira dia 14/11/2023', 'VScodeATT.jpg', 4),
+(3, '2023-11-14 16:33:44', 'Energia Solar? ou preços altos?', 'Um video esta viralizando na internet, um rapaz usando o calor do asfalto e uma frigideira para fritar ovo! o rapaz disse em entrevista aos nossos reposters: \"com essa onda de calor e com os preços das coisas, a gente tem que aprender a se virar com oque tem\", mesmo que tenha dado certo e tenha sido divertido, um alerta para as altas temperaturas nos indicam que se o ser humano não cuidar as coisas vão esquentar...', 'Um video esta viralizando na internet de uma rapaz usando o calor do asfalto e uma frigideira para fritar ovo!', 'fritandoOVO.jpg', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -58,7 +67,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `tipo`) VALUES
-(1, 'Juan', 'juanjuan@gmail.com.br', '$2y$10$B2af/6yE6hNkEzddLWFy4.SyB38KfOhf1SIyjZiA0rxzxHNg/.lZm', 'admin');
+(1, 'Juan Martinez', 'juan@gmail.com', 'salada123', 'admin'),
+(3, 'Beltrano Soares', 'beltrano@msn.com', '000penha', 'admin'),
+(4, 'chapolin Colarado', 'chapolin@vingadores.com.br', 'marreta', 'admin');
 
 --
 -- Índices para tabelas despejadas
@@ -86,13 +97,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restrições para despejos de tabelas
